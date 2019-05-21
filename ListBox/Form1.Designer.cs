@@ -37,42 +37,44 @@
             // lbView
             // 
             this.lbView.FormattingEnabled = true;
-            this.lbView.ItemHeight = 12;
-            this.lbView.Location = new System.Drawing.Point(28, 12);
+            this.lbView.ItemHeight = 15;
+            this.lbView.Location = new System.Drawing.Point(13, 13);
             this.lbView.Name = "lbView";
-            this.lbView.Size = new System.Drawing.Size(256, 256);
+            this.lbView.Size = new System.Drawing.Size(230, 229);
             this.lbView.TabIndex = 0;
+            this.lbView.SelectedIndexChanged += new System.EventHandler(this.LbView_SelectedIndexChanged);
             // 
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(31, 283);
+            this.lblResult.Location = new System.Drawing.Point(12, 245);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(37, 12);
+            this.lblResult.Size = new System.Drawing.Size(52, 15);
             this.lblResult.TabIndex = 1;
-            this.lblResult.Text = "결과 :";
+            this.lblResult.Text = "결과 : ";
             // 
             // txtList
             // 
-            this.txtList.Location = new System.Drawing.Point(28, 312);
+            this.txtList.Location = new System.Drawing.Point(12, 264);
             this.txtList.Name = "txtList";
-            this.txtList.Size = new System.Drawing.Size(256, 21);
+            this.txtList.Size = new System.Drawing.Size(230, 25);
             this.txtList.TabIndex = 2;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(28, 353);
+            this.btnAdd.Location = new System.Drawing.Point(12, 296);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(255, 44);
+            this.btnAdd.Size = new System.Drawing.Size(230, 40);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "추가";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 440);
+            this.ClientSize = new System.Drawing.Size(256, 348);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtList);
             this.Controls.Add(this.lblResult);
@@ -81,6 +83,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "리스트 추가";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,4 +97,3 @@
         private System.Windows.Forms.Button btnAdd;
     }
 }
-
